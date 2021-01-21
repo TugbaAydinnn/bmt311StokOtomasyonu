@@ -1,0 +1,30 @@
+--------------------------------------------------------
+--  File created - Perþembe-Ocak-21-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Trigger TRIGGER_TOPLAM_PERSONEL
+--------------------------------------------------------
+
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "SYSTEM"."TRIGGER_TOPLAM_PERSONEL" 
+BEFORE DELETE OR INSERT OR UPDATE ON PERSONELBILGILERI 
+FOR EACH ROW
+BEGIN
+    CASE
+    WHEN DELETING THEN 
+            UPDATE ToplamCalisan SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi-1
+            WHERE (ToplamCalisan.departmanID =:OLD.departmanID );
+    
+    WHEN INSERTING THEN
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi+1
+            WHERE (ToplamCalisan.departmanID =:NEW.departmanID );
+    
+     WHEN UPDATING THEN
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi-1
+            WHERE (ToplamCalisan.departmanID =:OLD.departmanID );
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi+1
+            WHERE (ToplamCalisan.departmanID =:NEW.departmanID );
+    
+    END CASE;
+END;
+/
+ALTER TRIGGER "SYSTEM"."TRIGGER_TOPLAM_PERSONEL" ENABLE;
