@@ -1,0 +1,48 @@
+--------------------------------------------------------
+--  File created - Perþembe-Ocak-21-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDUREMUSTERI
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDUREMUSTERI" (registros out sys_refcursor) AS 
+BEGIN
+OPEN registros FOR SELECT * FROM MusteriBilgileri;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDURE_PERSONEL
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDURE_PERSONEL" (registros out sys_refcursor) 
+AS
+BEGIN
+OPEN registros FOR SELECT * FROM PersonelBilgileri;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDURE_IADEBILGILERI
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDURE_IADEBILGILERI" (registros out sys_refcursor) AS 
+BEGIN
+OPEN registros FOR SELECT * FROM Iadebilgileri;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDURE_URUN
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDURE_URUN" (registros out sys_refcursor) AS 
+BEGIN
+OPEN registros FOR SELECT * FROM UrunBilgileri;
+END;
+
+/
