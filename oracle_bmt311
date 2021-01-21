@@ -1,0 +1,257 @@
+--------------------------------------------------------
+--  File created - Perþembe-Ocak-21-2021   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table IADEBILGILERI
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."IADEBILGILERI" 
+   (	"URUNID" VARCHAR2(11 BYTE), 
+	"AD" VARCHAR2(50 BYTE), 
+	"SOYAD" VARCHAR2(50 BYTE), 
+	"TELEFON" VARCHAR2(15 BYTE), 
+	"IADESEBEP" VARCHAR2(50 BYTE), 
+	"IADEACIKLAMA" VARCHAR2(60 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table URUNBILGILERI
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."URUNBILGILERI" 
+   (	"URUNID" VARCHAR2(11 BYTE), 
+	"MIKTAR" NUMBER(*,0), 
+	"URUN_TURU" VARCHAR2(50 BYTE), 
+	"URUN_OZELLIGI" VARCHAR2(50 BYTE), 
+	"URUN_CINSIYET" VARCHAR2(5 BYTE), 
+	"BEDEN" VARCHAR2(5 BYTE), 
+	"FIYAT" NUMBER(*,0), 
+	"URUN_RENK" VARCHAR2(15 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table TOPLAMCALISAN
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."TOPLAMCALISAN" 
+   (	"DEPARTMANID" VARCHAR2(11 BYTE), 
+	"CALISANSAYISI" NUMBER(*,0), 
+	"DEPARTMAN" VARCHAR2(50 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table TARIHBILGISI
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."TARIHBILGISI" 
+   (	"URUNID" VARCHAR2(11 BYTE), 
+	"TARIH" DATE
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table SATISBILGILERI
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."SATISBILGILERI" 
+   (	"URUNID" VARCHAR2(11 BYTE), 
+	"ILKMIKTAR" NUMBER(*,0)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table PERSONELBILGILERI
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."PERSONELBILGILERI" 
+   (	"TCNUMARASI" VARCHAR2(11 BYTE), 
+	"AD" VARCHAR2(50 BYTE), 
+	"SOYAD" VARCHAR2(50 BYTE), 
+	"SIFRE" VARCHAR2(50 BYTE), 
+	"TELNO" VARCHAR2(15 BYTE), 
+	"CINSIYET" VARCHAR2(5 BYTE), 
+	"OKULDURUMU" VARCHAR2(50 BYTE), 
+	"DEPARTMAN" VARCHAR2(50 BYTE), 
+	"DEPARTMANID" VARCHAR2(11 BYTE), 
+	"MAAS" NUMBER(*,0)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MUSTERIBILGILERI
+--------------------------------------------------------
+
+  CREATE TABLE "SYSTEM"."MUSTERIBILGILERI" 
+   (	"TCNUMARASI" VARCHAR2(11 BYTE), 
+	"AD" VARCHAR2(50 BYTE), 
+	"SOYAD" VARCHAR2(50 BYTE), 
+	"SIFRE" VARCHAR2(50 BYTE), 
+	"TELNO" VARCHAR2(15 BYTE), 
+	"CINSIYET" VARCHAR2(5 BYTE)
+   ) PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+REM INSERTING into SYSTEM.IADEBILGILERI
+SET DEFINE OFF;
+Insert into SYSTEM.IADEBILGILERI (URUNID,AD,SOYAD,TELEFON,IADESEBEP,IADEACIKLAMA) values ('7','Ayhan','Yilmaz','(0514) 782-8854','Büyük Beden',null);
+Insert into SYSTEM.IADEBILGILERI (URUNID,AD,SOYAD,TELEFON,IADESEBEP,IADEACIKLAMA) values ('5','Hayriye','Er','(0547) 515-8512','Modelini Begenmedim','Yakasini begenmedim.');
+Insert into SYSTEM.IADEBILGILERI (URUNID,AD,SOYAD,TELEFON,IADESEBEP,IADEACIKLAMA) values ('5','Ayse','Kandemir','(0452) 186-2851','Diger','Rengini Begenmedim');
+REM INSERTING into SYSTEM.URUNBILGILERI
+SET DEFINE OFF;
+Insert into SYSTEM.URUNBILGILERI (URUNID,MIKTAR,URUN_TURU,URUN_OZELLIGI,URUN_CINSIYET,BEDEN,FIYAT,URUN_RENK) values ('2','97','Etek','Kot Etek','KADIN','S','79','Mavi');
+Insert into SYSTEM.URUNBILGILERI (URUNID,MIKTAR,URUN_TURU,URUN_OZELLIGI,URUN_CINSIYET,BEDEN,FIYAT,URUN_RENK) values ('4','2','T-shirt','Polo T-shirt','ERKEK','M','30','Siyah');
+Insert into SYSTEM.URUNBILGILERI (URUNID,MIKTAR,URUN_TURU,URUN_OZELLIGI,URUN_CINSIYET,BEDEN,FIYAT,URUN_RENK) values ('1','199','Ceket','Deri Ceket','KADIN','M','178','Siyah');
+REM INSERTING into SYSTEM.TOPLAMCALISAN
+SET DEFINE OFF;
+Insert into SYSTEM.TOPLAMCALISAN (DEPARTMANID,CALISANSAYISI,DEPARTMAN) values ('1','2','Kasiyer');
+Insert into SYSTEM.TOPLAMCALISAN (DEPARTMANID,CALISANSAYISI,DEPARTMAN) values ('2','2','Tezgahtar');
+Insert into SYSTEM.TOPLAMCALISAN (DEPARTMANID,CALISANSAYISI,DEPARTMAN) values ('3','1','Sekreter');
+Insert into SYSTEM.TOPLAMCALISAN (DEPARTMANID,CALISANSAYISI,DEPARTMAN) values ('4','0','Hizmetli');
+REM INSERTING into SYSTEM.TARIHBILGISI
+SET DEFINE OFF;
+Insert into SYSTEM.TARIHBILGISI (URUNID,TARIH) values ('2',to_date('18/01/2021','DD/MM/RRRR'));
+Insert into SYSTEM.TARIHBILGISI (URUNID,TARIH) values ('1',to_date('18/01/2021','DD/MM/RRRR'));
+Insert into SYSTEM.TARIHBILGISI (URUNID,TARIH) values ('2',to_date('18/01/2021','DD/MM/RRRR'));
+Insert into SYSTEM.TARIHBILGISI (URUNID,TARIH) values ('2',to_date('18/01/2021','DD/MM/RRRR'));
+Insert into SYSTEM.TARIHBILGISI (URUNID,TARIH) values ('3',to_date('21/01/2021','DD/MM/RRRR'));
+REM INSERTING into SYSTEM.SATISBILGILERI
+SET DEFINE OFF;
+Insert into SYSTEM.SATISBILGILERI (URUNID,ILKMIKTAR) values ('2','100');
+Insert into SYSTEM.SATISBILGILERI (URUNID,ILKMIKTAR) values ('3','1');
+Insert into SYSTEM.SATISBILGILERI (URUNID,ILKMIKTAR) values ('4','3');
+Insert into SYSTEM.SATISBILGILERI (URUNID,ILKMIKTAR) values ('1','200');
+REM INSERTING into SYSTEM.PERSONELBILGILERI
+SET DEFINE OFF;
+Insert into SYSTEM.PERSONELBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET,OKULDURUMU,DEPARTMAN,DEPARTMANID,MAAS) values ('78941526302','Can','Temiz','efsdfgtu','(0258) 741-3652','ERKEK','Lise','Kasiyer','1','1500');
+Insert into SYSTEM.PERSONELBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET,OKULDURUMU,DEPARTMAN,DEPARTMANID,MAAS) values ('74125874266','Hülya','Bayraktar','4412588753652','(0214) 523-6985','KADIN','Ön lisans ','Kasiyer','1','2565');
+Insert into SYSTEM.PERSONELBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET,OKULDURUMU,DEPARTMAN,DEPARTMANID,MAAS) values ('1236985412','Kaan','Aydemir','47521','(0563) 541-8524','ERKEK','Ön lisans ','Tezgahtar','2','2500');
+Insert into SYSTEM.PERSONELBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET,OKULDURUMU,DEPARTMAN,DEPARTMANID,MAAS) values ('11585444448','Arzu','Gülsen','fhdvxv','(0254) 258-5114','KADIN','Ön lisans ','Tezgahtar','2','2500');
+Insert into SYSTEM.PERSONELBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET,OKULDURUMU,DEPARTMAN,DEPARTMANID,MAAS) values ('45638555244','Seval','Günes','ghjklsçlkjhg','(1585) 214-5202','KADIN','Lise','Sekreter','3','1200');
+REM INSERTING into SYSTEM.MUSTERIBILGILERI
+SET DEFINE OFF;
+Insert into SYSTEM.MUSTERIBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET) values ('74125842458','Hamza','Duran','123','(0524) 478-5154','ERKEK');
+Insert into SYSTEM.MUSTERIBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET) values ('65268741236','Ayse','Yilmaz','123123','(0544) 123-6985','KADIN');
+Insert into SYSTEM.MUSTERIBILGILERI (TCNUMARASI,AD,SOYAD,SIFRE,TELNO,CINSIYET) values ('12367412586','Fatma','Demir','567','(0512) 368-7412','KADIN');
+--------------------------------------------------------
+--  DDL for Trigger TRIGGER_TOPLAM_PERSONEL
+--------------------------------------------------------
+
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "SYSTEM"."TRIGGER_TOPLAM_PERSONEL" 
+BEFORE DELETE OR INSERT OR UPDATE ON PERSONELBILGILERI 
+FOR EACH ROW
+BEGIN
+    CASE
+    WHEN DELETING THEN 
+            UPDATE ToplamCalisan SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi-1
+            WHERE (ToplamCalisan.departmanID =:OLD.departmanID );
+    
+    WHEN INSERTING THEN
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi+1
+            WHERE (ToplamCalisan.departmanID =:NEW.departmanID );
+    
+     WHEN UPDATING THEN
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi-1
+            WHERE (ToplamCalisan.departmanID =:OLD.departmanID );
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi+1
+            WHERE (ToplamCalisan.departmanID =:NEW.departmanID );
+    
+    END CASE;
+END;
+/
+ALTER TRIGGER "SYSTEM"."TRIGGER_TOPLAM_PERSONEL" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger TRIGGER_TOPLAM_PERSONEL
+--------------------------------------------------------
+
+  CREATE OR REPLACE NONEDITIONABLE TRIGGER "SYSTEM"."TRIGGER_TOPLAM_PERSONEL" 
+BEFORE DELETE OR INSERT OR UPDATE ON PERSONELBILGILERI 
+FOR EACH ROW
+BEGIN
+    CASE
+    WHEN DELETING THEN 
+            UPDATE ToplamCalisan SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi-1
+            WHERE (ToplamCalisan.departmanID =:OLD.departmanID );
+    
+    WHEN INSERTING THEN
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi+1
+            WHERE (ToplamCalisan.departmanID =:NEW.departmanID );
+    
+     WHEN UPDATING THEN
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi-1
+            WHERE (ToplamCalisan.departmanID =:OLD.departmanID );
+            UPDATE ToplamCalisan  SET ToplamCalisan.calisanSayisi = ToplamCalisan.calisanSayisi+1
+            WHERE (ToplamCalisan.departmanID =:NEW.departmanID );
+    
+    END CASE;
+END;
+/
+ALTER TRIGGER "SYSTEM"."TRIGGER_TOPLAM_PERSONEL" ENABLE;
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDURE_IADEBILGILERI
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDURE_IADEBILGILERI" (registros out sys_refcursor) AS 
+BEGIN
+OPEN registros FOR SELECT * FROM Iadebilgileri;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDUREMUSTERI
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDUREMUSTERI" (registros out sys_refcursor) AS 
+BEGIN
+OPEN registros FOR SELECT * FROM MusteriBilgileri;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDURE_PERSONEL
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDURE_PERSONEL" (registros out sys_refcursor) 
+AS
+BEGIN
+OPEN registros FOR SELECT * FROM PersonelBilgileri;
+END;
+
+/
+--------------------------------------------------------
+--  DDL for Procedure SELECCIONARPROCEDURE_URUN
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE NONEDITIONABLE PROCEDURE "SYSTEM"."SELECCIONARPROCEDURE_URUN" (registros out sys_refcursor) AS 
+BEGIN
+OPEN registros FOR SELECT * FROM UrunBilgileri;
+END;
+
+/
